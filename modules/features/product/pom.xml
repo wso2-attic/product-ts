@@ -34,20 +34,16 @@
     <name>WSO2 Task Server - Features Aggregator Module</name>
     <description>Features Specific to the WSO2 Task Server</description>
 
-    <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.wso2.ts</groupId>
                 <artifactId>org.wso2.ts.styles</artifactId>
-                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.wso2.ts</groupId>
                 <artifactId>org.wso2.ts.samples</artifactId>
-                <version>${project.version}</version>
             </dependency>
         </dependencies>
-    </dependencyManagement>
 
     <modules>
         <module>org.wso2.ts.styles.feature</module>
