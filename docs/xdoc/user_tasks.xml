@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!--
+  ~ Copyright 2005-2007 WSO2, Inc. (http://wso2.com)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+      "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <title></title>
+</head>
+
+<body>
+        <p>[<a
+                href="http://wso2.com/products/task-server/">Download</a>]
+            | [<a href="index_docs.html">Documentation Home</a>] | [<a
+                    href="release_notes.html">Release Note</a>]
+        </p>
+	<h2>Scheduling User Web Tasks</h2>
+
+ <p>
+   The web tasks works in a way that, if you have any job to be executed in a periodic way, with a given criteria, the Task Server can be used as the entity which does the triggering. In registering a web task, the user will simply provide a URL, to which an HTTP GET request will be sent with each trigger event. So the target application which will be hit with the invocation of the target URL can execute the job that is expected to work according to the scheduling criteria. </p>
+
+ <p>The following steps show how to create an user web task.</p>
+
+ <ul>
+ <li>Navigate to "https://localhost:9443/", login with default admin credentials, admin/admin. </li>
+ <li>Click "Remote Tasks" in the left side menu in the web console, followed by "Add New Task" option.
+   <br/>  
+   <img src="images/userguide/new-task.png"/>
+   <p>Figure 1: Create New Remote Task</p>     
+ </li>
+ <li>Fill in the required fields, below contains an description of these fields:
+ <ul>
+   <li>Task Name: The name of the task to be scheduled</li>
+   <li>Target URL: This must be an HTTP/HTTPS URL, which is where the trigger event will be sent to</li>
+   <li>Allow Concurrent Execution: The connection made with the target URL will be retained until the target server keeps the connection open, and there is a read timeout of 30 seconds for this. The target server can choose to keep the connection alive until this time, and within this time, the task can be configured to execute another instance of the job overlapping an earlier run or not. If allow concurrent execution is set, overlapping scheduling will be enabled, if not, it will not execute concurrently. </li>
+   <li>Task Repeat Count: How many times the task should be repeatedly executed. For example, if the repeat count is given as 1, the totaly number of the task being executed will be 2. If the task needs to be executed only once, the task repeat count has to be 0.</li>
+   <li>Task Interval: If the "Task Repeat Count" is given, this setting must be given to provide the time interval in milliseconds the job executions will happen.</li>
+   <li>Cron Expression: The cron expression can be given rather than given Task Repeat Count and Task Interval in giving the scheduling criteria.</li>
+   <li>Start Time: The start time the task scheduling should happen.</li>
+   <li>End Time: The end time the task scheduling should stop.</li>
+ </ul>
+ </li>
+ <li>Click Schedule!</li>
+ </ul>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!--
+  ~ Copyright 2005-2007 WSO2, Inc. (http://wso2.com)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+        "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+        <h1>Welcome to WSO2 Task Server, 1.1.0</h1>
+
+        <h2>@buildNumber@ - WSO2 Task Server, 1.1.0 Released!</h2>
+
+        <p>[<a
+                href="http://wso2.com/products/task-server/">Download</a>]
+            | [<a href="index_docs.html">Documentation Home</a>] | [<a
+                    href="release_notes.html">Release Note</a>]
+        </p>
+
+        <p>The WSO2 Task Server is an convenient way to do shedule remotely triggered schedule tasks in the web!
+        </p>
+
+        <p>The WSO2 Task Server is built on top of the WSO2 Carbon platform. It utilizes
+            many features made available by the Carbon platform. A task can be scheduled where
+	    a simple HTTP URL can be given to be called according to the scheduling criteria.
+        </p>
+
+        <h2>WSO2 Task Server, Documentation</h2>
+
+        <p>See the
+            <a href="index_docs.html">full list of documents</a>
+            with
+            instructions on installation, administration, sample guides and how to use
+            the tools packaged with WSO2 Task Server , 1.1.0 .
+        </p>
+        <a></a>
+
+        <h2>Mailing Lists</h2>
+
+        <p>Your feedback on WSO2 Task Server is most appreciated. Please send them to our
+            user mailing lists:
+        </p>
+        <ul>
+            <li>WSO2 Task Server, Users' mailing list:
+                <a
+                        href="mailto:user@wso2.org">user@wso2.org
+                </a>                
+            </li>
+        </ul>
+        <ul>
+            <li>WSO2 Task Server, Developers' mailing list
+                <a
+                        href="mailto:dev@wso2.org">dev@wso2.org
+                </a>
+            </li>
+        </ul>
+        <h3></h3>
+
+    </body>
+</html>
