@@ -39,7 +39,9 @@
 
     <modules>
         <module>modules/styles</module>
-        <module>modules/features</module>
+        <module>modules/components/remote-tasks</module>
+        <module>modules/features/remote-tasks</module>
+        <module>modules/features/product</module>
         <module>modules/p2-profile</module>
         <module>modules/distribution</module>
     </modules>
@@ -210,6 +212,58 @@
                 <groupId>org.wso2.ts</groupId>
                 <artifactId>org.wso2.ts.samples</artifactId>
                 <version>${ts.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.remote-tasks.common</artifactId>
+                <version>${carbon.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.remote-tasks.core</artifactId>
+                <version>${carbon.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.remote-tasks.ui</artifactId>
+                <version>${carbon.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.core</artifactId>
+                <version>${carbon.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.utils</artifactId>
+                <version>${carbon.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.ntask.core</artifactId>
+                <version>${carbon.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.ui</artifactId>
+                <version>${carbon.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.remote-tasks.stub</artifactId>
+                <version>${carbon.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.remote-tasks.server.feature</artifactId>
+                <version>${carbon.version}</version>
+                <type>zip</type>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.remote-tasks.ui.feature</artifactId>
+                <version>${carbon.version}</version>
+                <type>zip</type>
             </dependency>
         </dependencies>
     </dependencyManagement>
