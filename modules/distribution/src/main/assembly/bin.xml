@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ ~ Copyright (c) 2005-2010, WSO2 Inc. (http://wso2.com) All Rights Reserved.
+ ~
+ ~ WSO2 Inc. licenses this file to you under the Apache License,
+ ~ Version 2.0 (the "License"); you may not use this file except
+ ~ in compliance with the License.
+ ~ You may obtain a copy of the License at
+ ~
+ ~    http://www.apache.org/licenses/LICENSE-2.0
+ ~
+ ~ Unless required by applicable law or agreed to in writing,
+ ~ software distributed under the License is distributed on an
+ ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ ~ KIND, either express or implied.  See the License for the
+ ~ specific language governing permissions and limitations
+ ~ under the License.
+ -->
+<assembly>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>target/wso2carbon-core-${carbon.version}</directory>
+            <outputDirectory>wso2ts-${pom.version}</outputDirectory>
+            <excludes>
+                <exclude>**/*.sh</exclude>
+                <exclude>**/conf/synapse.xml</exclude>
+                <exclude>**/log4j.properties</exclude>
+                <exclude>**/repository/deployment/server/axis2services/echo/**</exclude>
+                <exclude>**/repository/deployment/server/axis2services/version/**</exclude>
+                <exclude>**/version.txt</exclude>
+                <exclude>**/wso2server.bat</exclude>
+                <exclude>**/README.txt</exclude>
+                <exclude>**/LICENSE.txt</exclude>
+                <exclude>**/INSTALL.txt</exclude>
+                <exclude>**/release-notes.html</exclude>
+                <exclude>**/carbon.xml</exclude>
+                <exclude>**/repository/components/plugins/saxon*.jar</exclude>
+
+                <exclude>**/dbscripts/mysql.sql</exclude>
+                <exclude>**/dbscripts/db2.sql</exclude>
+                <exclude>**/dbscripts/mysql_cluster.sql</exclude>
+                <exclude>**/lib/org.wso2.carbon.server-${carbon.version}.jar</exclude>
+
+            </excludes>
+        </fileSet>
+        <fileSet>
+            <directory>target/wso2carbon-core-${carbon.version}</directory>
+            <outputDirectory>wso2ts-${pom.version}</outputDirectory>
+            <includes>
+                <include>**/*.sh</include>
+            </includes>
+            <fileMode>755</fileMode>
+        </fileSet>
+        <fileSet>
+            <directory>../p2-profile/target/wso2carbon-core-${carbon.version}/repository/conf/security</directory>
+            <outputDirectory>wso2ts-${pom.version}/repository/conf/security</outputDirectory>
+            <includes>
+                <include>**/jaas.conf</include>
+                <include>**/krb5.conf</include>
+            </includes>
+        </fileSet>
+	 <!--Multitenancy related file -->
+        <fileSet>
+            <directory>
+                ../p2-profile/target/wso2carbon-core-${carbon.version}/repository/conf/multitenancy/
+            </directory>
+            <outputDirectory>wso2ts-${pom.version}/repository/conf/multitenancy</outputDirectory>
+            <includes>
+                <include>**/stratos.xml</include>
+                <include>**/multitenancy-packages.xml</include>
+                <include>**/usage-throttling-agent-config.xml</include>
+                <include>**/cloud-services-desc.xml</include>
+            </includes>
+        </fileSet>
+
+        <fileSet>
+            <directory>../p2-profile/target/wso2carbon-core-${carbon.version}/dbscripts/identity</directory>
+            <outputDirectory>wso2ts-${pom.version}/dbscripts/identity</outputDirectory>
+            <includes>
+                <include>**/**.sql</include>
+            </includes>
+        </fileSet>
+
+        <fileSet>
+            <directory>../styles/service/src/main/resources/web/styles/css</directory>
+            <outputDirectory>wso2ts-${pom.version}/resources/allthemes/Default/admin</outputDirectory>
+            <includes>
+                <include>**/**.css</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>../styles/service/src/main/resources/web/styles/images</directory>
+            <outputDirectory>wso2ts-${pom.version}/resources/allthemes/Default/images</outputDirectory>
+            <includes>
+                <include>**/**.gif</include>
+                <include>**/**.png</include>
+            </includes>
+        </fileSet>
+	    <fileSet>
+            <directory>lib/home</directory>
+            <outputDirectory>wso2ts-${pom.version}/repository/deployment/server/webapps/STRATOS_ROOT</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>../p2-profile-gen/target/wso2carbon-core-${carbon.version}/dbscripts/identity/</directory>
+            <outputDirectory>${pom.artifactId}-${pom.version}/dbscripts/identity</outputDirectory>
+            <includes>
+                <include>**/**.sql</include>
+            </includes>
+        </fileSet>
+
+        <fileSet>
+            <directory>
+                ../p2-profile-gen/target/wso2carbon-core-${carbon.version}/repository/conf/
+            </directory>
+            <outputDirectory>${pom.artifactId}-${pom.version}/repository/conf</outputDirectory>
+            <includes>
+                <include>**/identity.xml</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+    <dependencySets>
+    </dependencySets>
+
+    <files>
+        <!-- Including quartz.properties file -->
+        <file>
+            <source>src/main/conf/etc/quartz.properties</source>
+            <outputDirectory>wso2ts-${pom.version}/repository/conf/etc</outputDirectory>
+        </file>
+      
+        <!-- Including coordination-client-config.xml file -->
+        <!--<file>-->
+            <!--<source>../p2-profile/target/wso2carbon-core-${carbon.version}/repository/conf/etc/coordination-client-config.xml</source>-->
+            <!--<outputDirectory>wso2ts-${pom.version}/repository/conf/etc</outputDirectory>-->
+        <!--</file>-->
+
+        <file>
+            <source>src/main/conf/log4j.properties</source>
+            <outputDirectory>wso2ts-${pom.version}/repository/conf</outputDirectory>
+            <destName>log4j.properties</destName>
+            <filtered>true</filtered>
+        </file>
+        <file>
+            <source>../../LICENSE.txt</source>
+            <outputDirectory>wso2ts-${pom.version}</outputDirectory>
+            <filtered>true</filtered>
+            <fileMode>644</fileMode>
+        </file>
+        <file>
+            <source>../../README.txt</source>
+            <outputDirectory>wso2ts-${pom.version}</outputDirectory>
+            <filtered>true</filtered>
+            <fileMode>644</fileMode>
+        </file>
+        <file>
+            <source>../../INSTALL.txt</source>
+            <outputDirectory>wso2ts-${pom.version}</outputDirectory>
+            <filtered>true</filtered>
+            <fileMode>644</fileMode>
+        </file>
+        <file>
+            <source>../../docs/xdoc/release_notes.xml</source>
+            <outputDirectory>wso2ts-${pom.version}</outputDirectory>
+            <destName>release-notes.html</destName>
+            <fileMode>644</fileMode>
+        </file>
+        <file>
+            <source>target/wso2carbon-core-${carbon.version}/bin/README.txt</source>
+            <outputDirectory>wso2ts-${pom.version}/bin/</outputDirectory>
+            <filtered>true</filtered>
+            <fileMode>644</fileMode>
+        </file>
+        <file>
+            <source>target/wso2carbon-core-${carbon.version}/bin/version.txt</source>
+            <outputDirectory>wso2ts-${pom.version}/bin/</outputDirectory>
+            <filtered>true</filtered>
+            <fileMode>644</fileMode>
+        </file>
+        <file>
+            <source>target/wso2carbon-core-${carbon.version}/bin/wso2server.bat</source>
+            <outputDirectory>wso2ts-${pom.version}/bin/</outputDirectory>
+            <filtered>true</filtered>
+        </file>
+
+        <file>
+            <source>target/wso2carbon-core-${carbon.version}/repository/conf/carbon.xml</source>
+            <outputDirectory>${pom.artifactId}-${pom.version}/repository/conf/</outputDirectory>
+            <filtered>true</filtered>
+        </file>
+
+        <!--<file>-->
+            <!--<source>../p2-profile/target/wso2carbon-core-${carbon.version}/repository/conf/identity.xml</source>-->
+            <!--<outputDirectory>wso2ts-${pom.version}/repository/conf</outputDirectory>-->
+            <!--<filtered>true</filtered>-->
+            <!--<fileMode>644</fileMode>-->
+        <!--</file>-->
+	    <file>
+            <source>../p2-profile/target/wso2carbon-core-${carbon.version}/repository/conf/etc/tasks-config.xml</source>
+            <outputDirectory>wso2ts-${pom.version}/repository/conf/etc</outputDirectory>
+        </file>
+	
+    </files>
+</assembly>
