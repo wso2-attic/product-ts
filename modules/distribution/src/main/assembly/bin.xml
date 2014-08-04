@@ -43,7 +43,6 @@
                 <exclude>**/dbscripts/mysql.sql</exclude>
                 <exclude>**/dbscripts/db2.sql</exclude>
                 <exclude>**/dbscripts/mysql_cluster.sql</exclude>
-                <exclude>**/lib/org.wso2.carbon.server-${carbon.version}.jar</exclude>
 
             </excludes>
         </fileSet>
