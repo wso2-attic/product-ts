@@ -39,10 +39,10 @@
                 <groupId>org.wso2.ts</groupId>
                 <artifactId>org.wso2.ts.styles</artifactId>
             </dependency>
-            <dependency>
+            <!--dependency>
                 <groupId>org.wso2.ts</groupId>
                 <artifactId>org.wso2.ts.samples</artifactId>
-            </dependency>
+            </dependency-->
         </dependencies>
 
     <modules>
