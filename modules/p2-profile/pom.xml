@@ -104,23 +104,23 @@
                                     org.wso2.carbon:org.wso2.carbon.core.runtime.feature:${carbon.version}
                                 </featureArtifactDef>
                                 <featureArtifactDef>
-                                    org.wso2.carbon:org.wso2.carbon.remote-tasks.feature:${carbon.version}
+                                    org.wso2.carbon:org.wso2.carbon.remote-tasks.feature:${task.version}
                                 </featureArtifactDef>
                                 <featureArtifactDef>
-                                    org.wso2.carbon:org.wso2.carbon.ntask.feature:${carbon.version}
+                                    org.wso2.carbon:org.wso2.carbon.ntask.feature:${ntask.version}
                                 </featureArtifactDef>
                                 <!--<featureArtifactDef>-->
                                     <!--org.wso2.carbon:org.wso2.carbon.coordination.core.feature:${carbon.version}-->
                                 <!--</featureArtifactDef>-->
                                 <!-- registry related features-->
                                 <featureArtifactDef>
-                                    org.wso2.carbon:org.wso2.carbon.registry.core.feature:${carbon.version}
+                                    org.wso2.carbon:org.wso2.carbon.registry.core.feature:${registry.version}
                                 </featureArtifactDef>
                                 <featureArtifactDef>
-                                    org.wso2.carbon:org.wso2.carbon.registry.ui.menu.feature:${carbon.version}
+                                    org.wso2.carbon:org.wso2.carbon.registry.ui.menu.feature:${registry.version}
                                 </featureArtifactDef>
                                 <featureArtifactDef>
-                                    org.wso2.carbon:org.wso2.carbon.registry.resource.properties.feature:${carbon.version}
+                                    org.wso2.carbon:org.wso2.carbon.registry.resource.properties.feature:${registry.version}
                                 </featureArtifactDef>
                                 <featureArtifactDef>
                                     org.wso2.ts:org.wso2.ts.styles.feature:${project.version}
@@ -138,13 +138,13 @@
                                     <!--org.wso2.carbon:org.wso2.carbon.stratos.deployment.feature:${stratos.version}-->
                                 <!--</featureArtifactDef>-->
                                 <featureArtifactDef>
-                                    org.wso2.carbon:org.wso2.carbon.security.mgt.feature:${carbon.version}
+                                    org.wso2.carbon:org.wso2.carbon.security.mgt.feature:${identity.version}
                                 </featureArtifactDef>
                                 <featureArtifactDef>
-                                    org.wso2.carbon:org.wso2.carbon.identity.authenticator.saml2.sso.feature:${carbon.version}
+                                    org.wso2.carbon:org.wso2.carbon.identity.authenticator.saml2.sso.feature:${identity.version}
                                 </featureArtifactDef>
                                 <featureArtifactDef>
-                                    org.wso2.carbon:org.wso2.carbon.user.mgt.feature:${carbon.version}
+                                    org.wso2.carbon:org.wso2.carbon.user.mgt.feature:${user.mgt.version}
                                 </featureArtifactDef>
                             </featureArtifacts>
                         </configuration>
@@ -196,12 +196,12 @@
 
                                 <feature>
                                     <id>org.wso2.carbon.remote-tasks.feature.group</id>
-                                    <version>${carbon.version}</version>
+                                    <version>${task.version}</version>
                                 </feature>
 
                                 <feature>
                                     <id>org.wso2.carbon.ntask.feature.group</id>
-                                    <version>${carbon.version}</version>
+                                    <version>${ntask.version}</version>
                                 </feature>
 
                                 <!--<feature>-->
@@ -211,17 +211,17 @@
                             
                                 <feature>
                                     <id>org.wso2.carbon.registry.core.feature.group</id>
-                                    <version>${carbon.version}</version>
+                                    <version>${registry.version}</version>
                                 </feature>
                                
                                 <feature>
                                     <id>org.wso2.carbon.registry.ui.menu.feature.group</id>
-                                    <version>${carbon.version}</version>
+                                    <version>${registry.version}</version>
                                 </feature>
                                 
                                 <feature>
                                     <id>org.wso2.carbon.registry.resource.properties.feature.group</id>
-                                    <version>${carbon.version}</version>
+                                    <version>${registry.version}</version>
                                 </feature>
 
                                 <feature>
@@ -246,17 +246,17 @@
 
                                 <feature>
                                     <id>org.wso2.carbon.security.mgt.feature.group</id>
-                                    <version>${carbon.version}</version>
+                                    <version>${identity.version}</version>
                                 </feature>
 
                                 <feature>
                                     <id>org.wso2.carbon.identity.authenticator.saml2.sso.feature.group</id>
-                                    <version>${carbon.version}</version>
+                                    <version>${identity.version}</version>
                                 </feature>
 
                                 <feature>
                                     <id>org.wso2.carbon.user.mgt.feature.group</id>
-                                    <version>${carbon.version}</version>
+                                    <version>${user.mgt.version}</version>
                                 </feature>
 
                             </features>

@@ -217,17 +217,17 @@
             <dependency>
                 <groupId>org.wso2.carbon</groupId>
                 <artifactId>org.wso2.carbon.remote-tasks.common</artifactId>
-                <version>${carbon.version}</version>
+                <version>${task.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon</groupId>
                 <artifactId>org.wso2.carbon.remote-tasks.core</artifactId>
-                <version>${carbon.version}</version>
+                <version>${task.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon</groupId>
                 <artifactId>org.wso2.carbon.remote-tasks.ui</artifactId>
-                <version>${carbon.version}</version>
+                <version>${task.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon</groupId>
@@ -242,7 +242,7 @@
             <dependency>
                 <groupId>org.wso2.carbon</groupId>
                 <artifactId>org.wso2.carbon.ntask.core</artifactId>
-                <version>${carbon.version}</version>
+                <version>${ntask.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon</groupId>
@@ -252,18 +252,18 @@
             <dependency>
                 <groupId>org.wso2.carbon</groupId>
                 <artifactId>org.wso2.carbon.remote-tasks.stub</artifactId>
-                <version>${carbon.version}</version>
+                <version>${ntask.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon</groupId>
                 <artifactId>org.wso2.carbon.remote-tasks.server.feature</artifactId>
-                <version>${carbon.version}</version>
+                <version>${task.version}</version>
                 <type>zip</type>
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon</groupId>
                 <artifactId>org.wso2.carbon.remote-tasks.ui.feature</artifactId>
-                <version>${carbon.version}</version>
+                <version>${task.version}</version>
                 <type>zip</type>
             </dependency>
 
@@ -301,13 +301,13 @@
             <dependency>
                 <groupId>org.wso2.carbon</groupId>
                 <artifactId>org.wso2.carbon.integration.common.admin.client</artifactId>
-                <version>${carbon.version}</version>
+                <version>${integration.test.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon</groupId>
                 <artifactId>org.wso2.carbon.integration.common.extensions</artifactId>
-                <version>${carbon.version}</version>
+                <version>${integration.test.version}</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
@@ -315,19 +315,25 @@
 
 
     <properties>
-        <carbon.version>4.3.0-SNAPSHOT</carbon.version>
+        <carbon.version>4.3.0</carbon.version>
+        <ntask.version>4.3.0-SNAPSHOT</ntask.version>
+        <integration.test.version>4.3.0-SNAPSHOT</integration.test.version>
+        <registry.version>4.3.0-SNAPSHOT</registry.version>
+        <identity.version>4.3.0-SNAPSHOT</identity.version>
+        <user.mgt.version>4.3.0-SNAPSHOT</user.mgt.version>
+        <task.version>4.3.0-SNAPSHOT</task.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <opencsv.version>1.8</opencsv.version>
         <stratos.version>2.2.1-SNAPSHOT</stratos.version>
         <poi.version>3.9.0.wso2v1</poi.version>
-        <axis2.wso2.version>1.6.1.wso2v11-SNAPSHOT</axis2.wso2.version>
-        <axiom.wso2.version>1.2.11.wso2v5-SNAPSHOT</axiom.wso2.version>
+        <axis2.wso2.version>1.6.1.wso2v11</axis2.wso2.version>
+        <axiom.wso2.version>1.2.11.wso2v5</axiom.wso2.version>
         <servlet-api.version>2.4</servlet-api.version>
         <version.log4j>1.2.13</version.log4j>
         <carbon.p2.plugin.version>1.5.3</carbon.p2.plugin.version>
         <commons.logging.version>1.1.1</commons.logging.version>
         <ts.version>1.2.0-SNAPSHOT</ts.version>
-        <test.framework.version>4.3.1-SNAPSHOT</test.framework.version>
+        <test.framework.version>4.3.1</test.framework.version>
         <testng.version>6.8</testng.version>
     </properties>
 
