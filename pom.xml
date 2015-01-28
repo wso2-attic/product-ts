@@ -25,7 +25,7 @@
     <groupId>org.wso2.ts</groupId>
     <artifactId>ts-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.2.0-SNAPSHOT</version>
+    <version>${ts.version}</version>
     <name>WSO2 Task Server - Aggregator Module</name>
     <url>http://wso2.com/products/task-server</url>
     <description>WSO2 Task Server (TS)</description>
@@ -324,7 +324,7 @@
         <task.version>4.3.0-SNAPSHOT</task.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <opencsv.version>1.8</opencsv.version>
-        <stratos.version>2.2.1-SNAPSHOT</stratos.version>
+        <!--<stratos.version>2.2.1-SNAPSHOT</stratos.version>-->
         <poi.version>3.9.0.wso2v1</poi.version>
         <axis2.wso2.version>1.6.1.wso2v11</axis2.wso2.version>
         <axiom.wso2.version>1.2.11.wso2v5</axiom.wso2.version>
