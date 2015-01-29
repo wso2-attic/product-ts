@@ -22,7 +22,7 @@
     <groupId>org.wso2.ts</groupId>
     <artifactId>ts-integration-tests-common</artifactId>
     <packaging>pom</packaging>
-    <version>${ts.version}</version>
+    <version>1.2.0-SNAPSHOT</version>
     <name>WSO2 Task Server Integration Test Common</name>
 
     <modules>
