@@ -65,7 +65,7 @@
                                 <bundleDef>org.wso2.ts:org.wso2.ts.styles</bundleDef>
                             </bundles>
                             <importFeatures>
-                                <importFeatureDef>org.wso2.carbon.core.ui:${carbon.version}</importFeatureDef>
+                                <importFeatureDef>org.wso2.carbon.core.ui:${carbon.kernel.version}</importFeatureDef>
                             </importFeatures>
                         </configuration>
                     </execution>

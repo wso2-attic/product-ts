@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>remote-tasks-features</artifactId>
-        <groupId>org.wso2.carbon</groupId>
+        <groupId>org.wso2.carbon.remotetasks</groupId>
         <version>4.3.0-SNAPSHOT</version>
 	    <relativePath>../pom.xml</relativePath>
     </parent>
@@ -18,12 +18,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.wso2.carbon</groupId>
+            <groupId>org.wso2.carbon.remotetasks</groupId>
             <artifactId>org.wso2.carbon.remote-tasks.server.feature</artifactId>
             <type>zip</type>
         </dependency>
         <dependency>
-            <groupId>org.wso2.carbon</groupId>
+            <groupId>org.wso2.carbon.remotetasks</groupId>
             <artifactId>org.wso2.carbon.remote-tasks.ui.feature</artifactId>
             <type>zip</type>
         </dependency>
@@ -51,8 +51,8 @@
                                 </properties>
                             </adviceFile>
                             <includedFeatures>
-                                <includedFeatureDef>org.wso2.carbon:org.wso2.carbon.remote-tasks.server.feature</includedFeatureDef>
-                                <includedFeatureDef>org.wso2.carbon:org.wso2.carbon.remote-tasks.ui.feature</includedFeatureDef>
+                                <includedFeatureDef>org.wso2.carbon.remotetasks:org.wso2.carbon.remote-tasks.server.feature:${task.version}</includedFeatureDef>
+                                <includedFeatureDef>org.wso2.carbon.remotetasks:org.wso2.carbon.remote-tasks.ui.feature:${task.version}</includedFeatureDef>
                             </includedFeatures>
                         </configuration>
                     </execution>

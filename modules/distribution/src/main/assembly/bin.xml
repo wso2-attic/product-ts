@@ -23,7 +23,7 @@
     <includeBaseDirectory>false</includeBaseDirectory>
     <fileSets>
         <fileSet>
-            <directory>target/wso2carbon-core-${carbon.version}</directory>
+            <directory>target/wso2carbon-core-${carbon.kernel.version}</directory>
             <outputDirectory>wso2ts-${pom.version}</outputDirectory>
             <excludes>
                 <exclude>**/*.sh</exclude>
@@ -47,7 +47,7 @@
             </excludes>
         </fileSet>
         <fileSet>
-            <directory>target/wso2carbon-core-${carbon.version}</directory>
+            <directory>target/wso2carbon-core-${carbon.kernel.version}</directory>
             <outputDirectory>wso2ts-${pom.version}</outputDirectory>
             <includes>
                 <include>**/*.sh</include>
@@ -55,7 +55,7 @@
             <fileMode>755</fileMode>
         </fileSet>
         <fileSet>
-            <directory>../p2-profile/target/wso2carbon-core-${carbon.version}/repository/conf/security</directory>
+            <directory>../p2-profile/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/security</directory>
             <outputDirectory>wso2ts-${pom.version}/repository/conf/security</outputDirectory>
             <includes>
                 <include>**/jaas.conf</include>
@@ -65,7 +65,7 @@
 	 <!--Multitenancy related file -->
         <fileSet>
             <directory>
-                ../p2-profile/target/wso2carbon-core-${carbon.version}/repository/conf/multitenancy/
+                ../p2-profile/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/multitenancy/
             </directory>
             <outputDirectory>wso2ts-${pom.version}/repository/conf/multitenancy</outputDirectory>
             <includes>
@@ -77,7 +77,7 @@
         </fileSet>
 
         <fileSet>
-            <directory>../p2-profile/target/wso2carbon-core-${carbon.version}/dbscripts/identity</directory>
+            <directory>../p2-profile/target/wso2carbon-core-${carbon.kernel.version}/dbscripts/identity</directory>
             <outputDirectory>wso2ts-${pom.version}/dbscripts/identity</outputDirectory>
             <includes>
                 <include>**/**.sql</include>
@@ -104,7 +104,7 @@
             <outputDirectory>wso2ts-${pom.version}/repository/deployment/server/webapps/STRATOS_ROOT</outputDirectory>
         </fileSet>
         <fileSet>
-            <directory>../p2-profile-gen/target/wso2carbon-core-${carbon.version}/dbscripts/identity/</directory>
+            <directory>../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/dbscripts/identity/</directory>
             <outputDirectory>${pom.artifactId}-${pom.version}/dbscripts/identity</outputDirectory>
             <includes>
                 <include>**/**.sql</include>
@@ -113,7 +113,7 @@
 
         <fileSet>
             <directory>
-                ../p2-profile-gen/target/wso2carbon-core-${carbon.version}/repository/conf/
+                ../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/
             </directory>
             <outputDirectory>${pom.artifactId}-${pom.version}/repository/conf</outputDirectory>
             <includes>
@@ -133,7 +133,7 @@
       
         <!-- Including coordination-client-config.xml file -->
         <!--<file>-->
-            <!--<source>../p2-profile/target/wso2carbon-core-${carbon.version}/repository/conf/etc/coordination-client-config.xml</source>-->
+            <!--<source>../p2-profile/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/etc/coordination-client-config.xml</source>-->
             <!--<outputDirectory>wso2ts-${pom.version}/repository/conf/etc</outputDirectory>-->
         <!--</file>-->
 
@@ -168,37 +168,37 @@
             <fileMode>644</fileMode>
         </file>
         <file>
-            <source>target/wso2carbon-core-${carbon.version}/bin/README.txt</source>
+            <source>target/wso2carbon-core-${carbon.kernel.version}/bin/README.txt</source>
             <outputDirectory>wso2ts-${pom.version}/bin/</outputDirectory>
             <filtered>true</filtered>
             <fileMode>644</fileMode>
         </file>
         <file>
-            <source>target/wso2carbon-core-${carbon.version}/bin/version.txt</source>
+            <source>target/wso2carbon-core-${carbon.kernel.version}/bin/version.txt</source>
             <outputDirectory>wso2ts-${pom.version}/bin/</outputDirectory>
             <filtered>true</filtered>
             <fileMode>644</fileMode>
         </file>
         <file>
-            <source>target/wso2carbon-core-${carbon.version}/bin/wso2server.bat</source>
+            <source>target/wso2carbon-core-${carbon.kernel.version}/bin/wso2server.bat</source>
             <outputDirectory>wso2ts-${pom.version}/bin/</outputDirectory>
             <filtered>true</filtered>
         </file>
 
         <file>
-            <source>target/wso2carbon-core-${carbon.version}/repository/conf/carbon.xml</source>
+            <source>target/wso2carbon-core-${carbon.kernel.version}/repository/conf/carbon.xml</source>
             <outputDirectory>${pom.artifactId}-${pom.version}/repository/conf/</outputDirectory>
             <filtered>true</filtered>
         </file>
 
         <!--<file>-->
-            <!--<source>../p2-profile/target/wso2carbon-core-${carbon.version}/repository/conf/identity.xml</source>-->
+            <!--<source>../p2-profile/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/identity.xml</source>-->
             <!--<outputDirectory>wso2ts-${pom.version}/repository/conf</outputDirectory>-->
             <!--<filtered>true</filtered>-->
             <!--<fileMode>644</fileMode>-->
         <!--</file>-->
 	    <file>
-            <source>../p2-profile/target/wso2carbon-core-${carbon.version}/repository/conf/etc/tasks-config.xml</source>
+            <source>../p2-profile/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/etc/tasks-config.xml</source>
             <outputDirectory>wso2ts-${pom.version}/repository/conf/etc</outputDirectory>
         </file>
 	

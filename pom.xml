@@ -21,6 +21,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
+    <parent>
+        <groupId>org.wso2</groupId>
+        <artifactId>wso2</artifactId>
+        <version>1</version>
+    </parent>
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.wso2.ts</groupId>
     <artifactId>ts-parent</artifactId>
@@ -48,35 +54,14 @@
     </modules>
 
     <scm>
-        <connection>scm:svn:http://wso2.org/repos/wso2/trunk/carbon/products/ts</connection>
-        <developerConnection>scm:svn:https://wso2.org/repos/wso2/trunk/carbon/products/ts</developerConnection>
-        <url>https://wso2.org/repos/wso2/trunk/carbon/products/ts</url>
+        <url>https://github.com/wso2/product-ts.git</url>
+        <developerConnection>scm:git:https://github.com/wso2/product-ts.git</developerConnection>
+        <connection>scm:git:https://github.com/wso2/product-ts.git</connection>
+        <tag>HEAD</tag>
     </scm>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>wso2.releases</id>
-            <name>WSO2 internal Repository</name>
-            <url>http://maven.wso2.org/nexus/content/repositories/releases/</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-                <checksumPolicy>ignore</checksumPolicy>
-            </releases>
-        </pluginRepository>
 
-        <pluginRepository>
-            <id>wso2.snapshots</id>
-            <name>WSO2 Snapshot Repository</name>
-            <url>http://maven.wso2.org/nexus/content/repositories/snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </pluginRepository>
+    <pluginRepositories>
         <pluginRepository>
             <id>wso2-nexus</id>
             <name>WSO2 internal Repository</name>
@@ -89,62 +74,47 @@
         </pluginRepository>
     </pluginRepositories>
 
-    <repositories>
-        <!-- Before adding ANYTHING in here, please start a discussion on the dev list.
-        Ideally the Axis2 build should only use Maven central (which is available
-        by default) and nothing else. We had troubles with other repositories in
-        the past. Therefore configuring additional repositories here should be
-        considered very carefully. -->
-        <repository>
-            <id>wso2-nexus</id>
-            <name>WSO2 internal Repository</name>
-            <url>http://maven.wso2.org/nexus/content/groups/wso2-public/</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-                <checksumPolicy>ignore</checksumPolicy>
-            </releases>
-        </repository>
+    <!--<repositories>-->
+        <!--&lt;!&ndash; Before adding ANYTHING in here, please start a discussion on the dev list.-->
+        <!--Ideally the Axis2 build should only use Maven central (which is available-->
+        <!--by default) and nothing else. We had troubles with other repositories in-->
+        <!--the past. Therefore configuring additional repositories here should be-->
+        <!--considered very carefully. &ndash;&gt;-->
+        <!--<repository>-->
+            <!--<id>wso2-nexus</id>-->
+            <!--<name>WSO2 internal Repository</name>-->
+            <!--<url>http://maven.wso2.org/nexus/content/groups/wso2-public/</url>-->
+            <!--<releases>-->
+                <!--<enabled>true</enabled>-->
+                <!--<updatePolicy>daily</updatePolicy>-->
+                <!--<checksumPolicy>ignore</checksumPolicy>-->
+            <!--</releases>-->
+        <!--</repository>-->
 
-        <repository>
-            <id>wso2.releases</id>
-            <name>WSO2 internal Repository</name>
-            <url>http://maven.wso2.org/nexus/content/repositories/releases/</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-                <checksumPolicy>ignore</checksumPolicy>
-            </releases>
-        </repository>
+        <!--<repository>-->
+            <!--<id>wso2.releases</id>-->
+            <!--<name>WSO2 internal Repository</name>-->
+            <!--<url>http://maven.wso2.org/nexus/content/repositories/releases/</url>-->
+            <!--<releases>-->
+                <!--<enabled>true</enabled>-->
+                <!--<updatePolicy>daily</updatePolicy>-->
+                <!--<checksumPolicy>ignore</checksumPolicy>-->
+            <!--</releases>-->
+        <!--</repository>-->
 
-        <repository>
-            <id>wso2.snapshots</id>
-            <name>WSO2 Snapshot Repository</name>
-            <url>http://maven.wso2.org/nexus/content/repositories/snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
-    </repositories>
-
-
-    <distributionManagement>
-        <repository>
-            <id>wso2.releases</id>
-            <name>WSO2 internal Repository</name>
-            <url>http://maven.wso2.org/nexus/content/repositories/releases/</url>
-        </repository>
-
-        <snapshotRepository>
-            <id>wso2.snapshots</id>
-            <name>WSO2 Snapshot Repository</name>
-            <url>http://maven.wso2.org/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+        <!--<repository>-->
+            <!--<id>wso2.snapshots</id>-->
+            <!--<name>WSO2 Snapshot Repository</name>-->
+            <!--<url>http://maven.wso2.org/nexus/content/repositories/snapshots/</url>-->
+            <!--<snapshots>-->
+                <!--<enabled>true</enabled>-->
+                <!--<updatePolicy>daily</updatePolicy>-->
+            <!--</snapshots>-->
+            <!--<releases>-->
+                <!--<enabled>false</enabled>-->
+            <!--</releases>-->
+        <!--</repository>-->
+    <!--</repositories>-->
 
     <profiles>
         <profile>
@@ -209,59 +179,59 @@
                 <artifactId>org.wso2.ts.styles</artifactId>
                 <version>${ts.version}</version>
             </dependency>
+            <!--<dependency>-->
+                <!--<groupId>org.wso2.ts</groupId>-->
+                <!--<artifactId>org.wso2.ts.samples</artifactId>-->
+                <!--<version>${ts.version}</version>-->
+            <!--</dependency>-->
             <dependency>
-                <groupId>org.wso2.ts</groupId>
-                <artifactId>org.wso2.ts.samples</artifactId>
-                <version>${ts.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon</groupId>
+                <groupId>org.wso2.carbon.remotetasks</groupId>
                 <artifactId>org.wso2.carbon.remote-tasks.common</artifactId>
                 <version>${task.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.wso2.carbon</groupId>
+                <groupId>org.wso2.carbon.remotetasks</groupId>
                 <artifactId>org.wso2.carbon.remote-tasks.core</artifactId>
                 <version>${task.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.wso2.carbon</groupId>
+                <groupId>org.wso2.carbon.remotetasks</groupId>
                 <artifactId>org.wso2.carbon.remote-tasks.ui</artifactId>
                 <version>${task.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon</groupId>
                 <artifactId>org.wso2.carbon.core</artifactId>
-                <version>${carbon.version}</version>
+                <version>${carbon.kernel.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon</groupId>
                 <artifactId>org.wso2.carbon.utils</artifactId>
-                <version>${carbon.version}</version>
+                <version>${carbon.kernel.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.wso2.carbon</groupId>
+                <groupId>org.wso2.carbon.commons</groupId>
                 <artifactId>org.wso2.carbon.ntask.core</artifactId>
                 <version>${ntask.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon</groupId>
                 <artifactId>org.wso2.carbon.ui</artifactId>
-                <version>${carbon.version}</version>
+                <version>${carbon.kernel.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.wso2.carbon</groupId>
+                <groupId>org.wso2.carbon.commons</groupId>
                 <artifactId>org.wso2.carbon.remote-tasks.stub</artifactId>
                 <version>${ntask.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.wso2.carbon</groupId>
+                <groupId>org.wso2.carbon.remotetasks</groupId>
                 <artifactId>org.wso2.carbon.remote-tasks.server.feature</artifactId>
                 <version>${task.version}</version>
                 <type>zip</type>
             </dependency>
             <dependency>
-                <groupId>org.wso2.carbon</groupId>
+                <groupId>org.wso2.carbon.remotetasks</groupId>
                 <artifactId>org.wso2.carbon.remote-tasks.ui.feature</artifactId>
                 <version>${task.version}</version>
                 <type>zip</type>
@@ -299,13 +269,13 @@
                 <version>${testng.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.wso2.carbon</groupId>
+                <groupId>org.wso2.carbon.automationutils</groupId>
                 <artifactId>org.wso2.carbon.integration.common.admin.client</artifactId>
                 <version>${integration.test.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.wso2.carbon</groupId>
+                <groupId>org.wso2.carbon.automationutils</groupId>
                 <artifactId>org.wso2.carbon.integration.common.extensions</artifactId>
                 <version>${integration.test.version}</version>
                 <scope>test</scope>
@@ -315,12 +285,12 @@
 
 
     <properties>
-        <carbon.version>4.3.0</carbon.version>
-        <ntask.version>4.3.0-SNAPSHOT</ntask.version>
-        <integration.test.version>4.3.0-SNAPSHOT</integration.test.version>
-        <registry.version>4.3.0-SNAPSHOT</registry.version>
-        <identity.version>4.3.0-SNAPSHOT</identity.version>
-        <user.mgt.version>4.3.0-SNAPSHOT</user.mgt.version>
+        <carbon.kernel.version>4.3.0</carbon.kernel.version>
+        <ntask.version>4.3.1</ntask.version>
+        <integration.test.version>4.3.0</integration.test.version>
+        <registry.version>4.3.1</registry.version>
+        <identity.version>4.3.3</identity.version>
+        <user.mgt.version>4.3.2</user.mgt.version>
         <task.version>4.3.0-SNAPSHOT</task.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <opencsv.version>1.8</opencsv.version>
